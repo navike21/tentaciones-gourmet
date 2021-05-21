@@ -1,0 +1,40 @@
+@import './utils/font';
+@import './utils/mixin';
+@import './utils/sizeFont';
+@import './utils/variables';
+
+@import './structure/header';
+@import './structure/hero';
+
+html {
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  @include principal-font;
+  @include size-font;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  border: 0;
+  outline: 0;
+  @include principal-font;
+}
+
+a,
+button {
+  cursor: pointer;
+}

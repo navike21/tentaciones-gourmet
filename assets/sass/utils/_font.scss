@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+@font-face {
+  font-family: 'Shorelines Script Bold'; src: url('../fonts/shorelines-script-bold.woff2') format('woff2'), url('../fonts/shorelines-script-bold.woff') format('woff'), url('../fonts/shorelines-script-bold.ttf')  format('truetype');
+};
+
+@mixin principal-font {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin secondary-font {
+  font-family: 'Shorelines Script Bold', sans-serif;
+}

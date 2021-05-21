@@ -1,0 +1,90 @@
+@import '../utils/aligments';
+@import '../utils/mixin';
+@import '../utils/variables';
+
+.header {
+  background-color: $white;
+  @include section-middle-center;
+  @media screen and (min-width: 1px) {
+    height: 10rem
+  }
+  @media screen and (min-width: $tablet) {
+    height: 14rem;
+  }
+  &__content {
+    @include content;
+    @include section-middle-justify;
+  }
+  &__logo {
+    @media screen and (min-width: 1px) {
+      width: 9rem
+    }
+    @media screen and (min-width: $tablet) {
+      width: 12rem;
+    }
+    &-image {
+      width: 100%;
+    }
+  }
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 1px) {
+      width: 50vw;
+      @include section-middle-center;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 35vw;
+      @include section-middle-justify;
+    }
+    @media screen and (min-width: $large-screen) {
+      width: 20vw;
+    }
+    @media screen and (min-width: $xlarge-screen) {
+      width: 15vw;
+    }
+    &-item {
+      a {
+        color: $brown;
+        font-weight: 500;
+        @include transition;
+        &:hover {
+          color: $pink;
+          @include transition;
+        }
+      }
+      svg {
+        height: 2.5rem;
+        path {
+          fill: $brown;
+          @include transition;
+        }
+        &:hover {
+          path {
+            fill: $pink;
+            @include transition;
+          }
+        }
+      }
+      @media screen and (min-width: 1px) {
+        margin: 0 .6rem;
+      }
+      @media screen and (min-width: $tablet) {
+        margin: 0;
+      }
+      &:first-child {
+        @media screen and (min-width: 1px) {
+          width: 100%;
+          margin: 0 0 1.5rem;
+          text-align: center;
+        }
+        @media screen and (min-width: $tablet) {
+          width: auto;
+          text-align: left;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

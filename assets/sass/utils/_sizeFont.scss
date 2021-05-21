@@ -1,0 +1,33 @@
+@import './variables';
+
+@mixin size-font {
+  @media screen and (min-width: 1px) and (orientation: portrait) {
+    font-size: 2.7vw;
+  }
+  @media screen and (min-width: 1px) and (orientation: landscape) {
+    font-size: 1.6vw;
+  }
+
+  @media screen and (min-width: $tablet) and (orientation: portrait) {
+    font-size: 1.3vw;
+  }
+  @media screen and (min-width: $tablet) and (orientation: landscape) {
+    font-size: 1vw;
+  }
+
+  @media screen and (min-width: $small-screen) and (orientation: landscape) {
+    font-size: 1vw;
+  }
+
+  @media screen and (min-width: $medium-screen) and (orientation: landscape) {
+    font-size: .8vw;
+  }
+
+  @media screen and (min-width: $large-screen) and (orientation: landscape) {
+    font-size: .75vw;
+  }
+
+  @media screen and (min-width: $xlarge-screen) and (orientation: landscape) {
+    font-size: .53vw;
+  }
+}

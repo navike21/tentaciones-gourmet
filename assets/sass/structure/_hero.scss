@@ -1,0 +1,54 @@
+@import '../utils/aligments';
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.hero {
+  background-image: url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  @include section-middle-center;
+  @media screen and (min-width: 1px) {
+    background-position: 15% top;
+    height: calc(100vh - 10rem);
+  }
+  @media screen and (min-width: $tablet) {
+    background-position: center top;
+    height: calc(100vh - 14rem);
+  }
+  &__soon {
+    background-color: rgba($pink, .8);
+    width: 100%;
+    &-text {
+      color: $brown;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      padding: 2rem 0;
+      @include content;
+      @media screen and (min-width: 1px) {
+        font-size: 2.7rem;
+      }
+      @media screen and (min-width: $xlarge-screen) {
+        font-size: 3.95rem;
+      }
+    }
+  }
+  &__slogan {
+    color: $white;
+    text-align: center;
+    @include secondary-font;
+    @media screen and (min-width: 1px) {
+      margin-top: 5rem;
+      font-size: 5rem;
+    }
+    @media screen and (min-width: $large-screen) {
+      // margin-top: 7rem;
+      font-size: 7.3rem;
+    }
+    @media screen and (min-width: $xlarge-screen) {
+      margin-top: 7rem;
+      font-size: 10.8rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@mixin section-element {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin reverse {
+  flex-direction: row-reverse;
+}
+
+// SECTION TOP GROUP
+@mixin section-top {
+  align-content: flex-start;
+  @include section-element
+}
+
+@mixin section-top-left {
+  @include section-top
+}
+
+@mixin section-top-center {
+  justify-content: center;
+  @include section-top
+}
+
+@mixin section-top-right {
+  justify-content: flex-end;
+  @include section-top
+}
+
+@mixin section-top-justify {
+  justify-content: space-between;
+  @include section-top
+}
+
+// SECTION MIDDLE GROUP
+
+@mixin section-middle {
+  align-content: center;
+  @include section-element;
+  align-items: center;
+}
+
+@mixin section-middle-left {
+  @include section-middle
+}
+
+@mixin section-middle-center {
+  justify-content: center;
+  @include section-middle
+}
+
+@mixin section-middle-right {
+  justify-content: flex-end;
+  @include section-middle
+}
+
+@mixin section-middle-justify {
+  justify-content: space-between;
+  @include section-middle
+}
+
+// SECTION BOTTOM GROUP
+
+@mixin section-bottom {
+  align-content: flex-end;
+  @include section-element;
+  align-items: flex-end;
+}
+
+@mixin section-bottom-left {
+  @include section-bottom
+}
+
+@mixin section-bottom-center {
+  justify-content: center;
+  @include section-bottom
+}
+
+@mixin section-bottom-right {
+  justify-content: flex-end;
+  @include section-bottom
+}
+
+@mixin section-bottom-justify {
+  justify-content: space-between;
+  @include section-bottom
+}
