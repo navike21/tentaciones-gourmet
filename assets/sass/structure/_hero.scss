@@ -11,10 +11,12 @@
   @media screen and (min-width: 1px) {
     background-position: 15% top;
     height: calc(100vh - 10rem);
+    margin-top: 10rem;
   }
   @media screen and (min-width: $tablet) {
     background-position: center top;
     height: calc(100vh - 14rem);
+    margin-top: 14rem;
   }
   &__soon {
     background-color: rgba($pink, .8);
@@ -30,7 +32,7 @@
         font-size: 2.7rem;
       }
       @media screen and (min-width: $xlarge-screen) {
-        font-size: 3.95rem;
+        font-size: 3.3rem;
       }
     }
   }
@@ -43,12 +45,11 @@
       font-size: 5rem;
     }
     @media screen and (min-width: $large-screen) {
-      // margin-top: 7rem;
       font-size: 7.3rem;
     }
     @media screen and (min-width: $xlarge-screen) {
       margin-top: 7rem;
-      font-size: 10.8rem;
+      font-size: 8.7rem;
     }
   }
 }

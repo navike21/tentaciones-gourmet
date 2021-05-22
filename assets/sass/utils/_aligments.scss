@@ -31,7 +31,7 @@
 
 @mixin section-top-justify {
   justify-content: space-between;
-  @include section-top
+  @include section-top;
 }
 
 // SECTION MIDDLE GROUP

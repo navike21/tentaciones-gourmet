@@ -4,8 +4,11 @@
     width: 100%;
     margin: 0 auto;
   }
-  @media screen and (min-width: $small-screen) {
+  @media screen and (min-width: $medium-screen) {
     max-width: 60vw;
+  }
+  @media screen and (min-width: $xlarge-screen) {
+    max-width: 50vw;
   }
 }
 
