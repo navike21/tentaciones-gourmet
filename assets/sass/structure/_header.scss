@@ -8,6 +8,7 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 100;
   @include section-middle-center;
   @media screen and (min-width: 1px) {
     height: 10rem
