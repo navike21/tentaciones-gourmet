@@ -3,7 +3,7 @@
 @import '../utils/variables';
 
 .body {
-  background-color: rgba($brown2, .3);
+  background-color: $brown3;
   padding: 2rem 0;
   &__content {
     margin: 0 auto;
@@ -37,6 +37,11 @@
     padding: 1rem 2.5rem;
     border-radius: 1rem;
     font-size: 1.8rem;
+    @include transition;
+    &:hover {
+      background-color: $pink;
+      @include transition;
+    }
   }
   &__text {
     text-align: center;
@@ -61,5 +66,52 @@
       margin: 2rem auto 4rem;
       width: calc(70% - 3rem);
     }
+  }
+}
+
+.orders {
+  position: relative;
+  @media screen and (min-width: 1px) {
+    width: calc(97% - 4rem);
+    margin: 4rem auto 0;
+    padding: 4rem 2rem 1rem;
+    border: .3rem solid $pink;
+    &::after {
+      background-color: $brown3;
+      content: '';
+      background-image: url('../images/bolso.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      @media screen and (min-width: 1px) {
+        left: 0;
+        right: 0;
+        top: -3rem;
+        width: 8rem;
+        height: 6rem;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: $small-screen) {
+        top: 0;
+        bottom: 0;
+        right: inherit;
+        left: -3.5rem;
+        margin: auto 0;
+        height: 12rem;
+        width: 7rem;
+      }
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: 28.5rem;
+  }
+  @media screen and (min-width: $small-screen) {
+    margin: 4rem auto;
+    padding: 1rem 2rem 1rem 5rem;
+  }
+  p {
+    font-size: 1.6rem;
+    color: $brown;
+    margin: 1rem 0;
   }
 }
