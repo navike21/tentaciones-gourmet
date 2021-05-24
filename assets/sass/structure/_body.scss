@@ -130,7 +130,7 @@
   &__item {
     margin: 1rem 0;
     @media screen and (min-width: $tablet) {
-      width: 30%;
+      width: 31%;
     }
   }
   &__image {
@@ -140,7 +140,52 @@
     margin: 0;
     color: $brown;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem 0
+  }
+}
+
+.testimonials {
+  width: 100%;
+  position: relative;
+  &__image {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  &__content {
+    background-color: $pink;
+    padding: 3rem;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 2;
+    font-size: 1.8rem;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      bottom: 0;
+      margin: auto 0;
+      width: 22rem;
+      height: 28rem;
+      right: 1rem;
+      top: 0;
+      border-radius: 1rem;
+    }
+    @media screen and (min-width: $small-screen) {
+      width: 26rem;
+      height: 26rem;
+    }
+  }
+  &__auth {
+    color: $brown;
+    margin: 4rem 0 0;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1;
+    @include secondary-font
   }
 }
