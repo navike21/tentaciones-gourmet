@@ -37,7 +37,7 @@
     padding: 0;
     @media screen and (min-width: 1px) {
       width: 50vw;
-      @include section-middle-center;
+      @include section-middle-right;
     }
     @media screen and (min-width: $tablet) {
       width: 35vw;
@@ -82,7 +82,7 @@
         @media screen and (min-width: 1px) {
           width: 100%;
           margin: 0 0 1.5rem;
-          text-align: center;
+          text-align: right;
         }
         @media screen and (min-width: $tablet) {
           width: auto;
