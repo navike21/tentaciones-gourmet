@@ -1,0 +1,45 @@
+@import '../utils/aligments';
+@import '../utils/mixin';
+@import '../utils/variables';
+
+.footer {
+  background-color: $brown2;
+  &__container {
+    padding: 2rem 0;
+    @include content;
+    @media screen and (min-width: $tablet) {
+      @include section-middle-justify;
+    }
+  }
+  &__menu {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 1rem 0;
+      @include section-middle-left;
+      svg {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+        path {
+          fill: $brown;
+        }
+      }
+      span,
+      a {
+        font-size: 1.6rem;
+        color: $brown
+      }
+    }
+  }
+  &__logo {
+    width: 8rem;
+    margin: 0 auto;
+    display: block;
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+      width: 12rem;
+    }
+  }
+}
