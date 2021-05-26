@@ -2,6 +2,42 @@
 @import '../utils/mixin';
 @import '../utils/variables';
 
+.chispas {
+  &2{
+    @media screen and (min-width: 1px) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) {
+      display: block;
+      position: absolute;
+      top: 200vw;
+      width: 18vw;
+    }
+    @media screen and (min-width: $large-screen) {
+      position: absolute;
+      top: 80vw;
+      width: 18vw;
+    }
+
+  }
+  &1{
+    @media screen and (min-width: 1px) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 200vw;
+      width: 18vw;
+    }
+    @media screen and (min-width: $large-screen) {
+      top: 70vw;
+      width: 18vw;
+    }
+  }
+}
+
 .body {
   background-color: $brown3;
   padding: 2rem 0;
