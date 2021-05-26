@@ -7,7 +7,7 @@
     @media screen and (min-width: 1px) {
       display: none;
     }
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (min-height: 600px) {
       display: block;
       position: absolute;
       top: 200vw;
@@ -17,6 +17,7 @@
       position: absolute;
       top: 80vw;
       width: 18vw;
+      z-index: 1;
     }
 
   }
@@ -24,12 +25,13 @@
     @media screen and (min-width: 1px) {
       display: none;
     }
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (min-height: 600px) {
       display: block;
       position: absolute;
       right: 0;
       top: 200vw;
       width: 18vw;
+      z-index: 1;
     }
     @media screen and (min-width: $large-screen) {
       top: 70vw;
@@ -154,6 +156,8 @@
 
 .products {
   width: 100%;
+  position: relative;
+  z-index: 3;
   &__title {
     text-align: center;
     font-size: 4rem;
