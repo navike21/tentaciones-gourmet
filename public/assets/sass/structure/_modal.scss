@@ -1,0 +1,117 @@
+@import '../utils/aligments';
+@import '../utils/mixin';
+@import '../utils/variables';
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  position: relative;
+  opacity: 0;
+  z-index: -1;
+  &::after {
+    background-color: rgba($brown, .9);
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+  }
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    @include section-middle-center;
+    svg {
+      height: 3rem;
+      path {
+        fill: $brown;
+      }
+    }
+  }
+  &__title {
+    width: 21rem;
+    font-size: 2.1rem;
+    font-weight: 300;
+  }
+  &__content {
+    opacity: 0;
+    background-color: $white;
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 1rem;
+    &-title {
+      padding: 1rem;
+      position: relative;
+      @include section-middle-center
+    }
+    &-imagetitle {
+      height: 4rem;
+      margin-right: 1rem;
+    }
+    @media screen and (min-width: 1px) {
+      width: 35rem;
+      height: 35rem;
+    }
+    @media screen and (min-width: $small-screen) {
+      width: 40rem;
+      height: 37rem;
+    }
+  }
+  &__images {
+    width: 100%;
+    @include section-middle-justify;
+    img {
+      width: 49%;
+    }
+  }
+  &__texto {
+    text-align: center;
+    width: 90%;
+    margin: 2rem auto 1rem;
+    color: $brown;
+    &-tel {
+      font-weight: 700;
+      color: $brown;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &-open {
+    z-index: 103;
+    animation-name: fadeIn;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    .modal__content {
+      animation-name: zoomIn;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+      animation-delay: .5s;
+    }
+  }
+}
