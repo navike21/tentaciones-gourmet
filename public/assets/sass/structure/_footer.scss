@@ -6,10 +6,22 @@
   background-color: $brown2;
   &__tel {
     color: $brown;
+    font-weight: 700;
+    margin-right: 1rem;
+    @include section-middle-left;
+    svg {
+      height: 2.5rem;
+      margin-right: 1rem;
+      path {
+        fill: $brown;
+      }
+    }
     @media screen and (min-width: $tablet) {
-      display: block;
+      display: inline-block;
       text-align: right;
-      font-size: 4rem;
+      font-size: 2.5rem;
+      vertical-align: middle;
+      margin-left: 1rem;
     }
   }
   &__container {
@@ -44,27 +56,55 @@
   &__info {
     @include section-middle-center;
     &-central {
-      margin-right: 1rem;
+      margin: 1rem 1rem 0 0;
       @media screen and (min-width: 1px) {
         width: 100%;
-        text-align: center;
+        text-align: left;
         color: $brown;
-        font-size: 2.5rem;
+        font-size: 2rem;
+        @include section-middle-left;
+        span {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
       }
       @media screen and (min-width: $tablet) {
         width: auto;
         text-align: right;
         margin-right: 2rem;
+        font-size: 1.5rem;
+        display: block;
+        span {
+          display: block;
+        }
       }
     }
   }
   &__logo {
     width: 8rem;
-    margin: 0 auto;
+    margin: 4rem auto 0;
     display: block;
     @media screen and (min-width: $tablet) {
       margin: 0;
       width: 12rem;
+    }
+  }
+  &__content-info {
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+      width: auto;
+      span {
+        display: block;
+      }
+    }
+  }
+  &__rights {
+    text-align: center;
+    color: $brown;
+    font-size: 1.5rem;
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+      text-align: left;
     }
   }
 }
